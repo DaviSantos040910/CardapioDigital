@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cardapiodigital.R
@@ -53,7 +54,12 @@ class CategoryFragment : Fragment() {
             intent.putExtra("itemDescription", item.description)
             intent.putExtra("itemPrice", item.price)
             intent.putExtra("itemImage", item.imageResId)
-            startActivity(intent)
+            val options = ActivityOptionsCompat.makeCustomAnimation(
+                requireContext(),
+                android.R.anim.fade_in,
+                android.R.anim.fade_out
+            )
+            startActivity(intent,options.toBundle())
         }
         recyclerView.adapter = adapter
 

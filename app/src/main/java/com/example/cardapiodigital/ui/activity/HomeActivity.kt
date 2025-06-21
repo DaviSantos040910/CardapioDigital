@@ -3,6 +3,7 @@ package com.example.cardapiodigital.ui.activity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import android.widget.CheckBox
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
@@ -63,6 +64,10 @@ class HomeActivity : AppCompatActivity() {
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             tab.text = categories[position]
         }.attach()
+        binding.viewPager.startAnimation(
+            AnimationUtils.loadAnimation(this, R.anim.layout_fade)
+        )
+
     }
 
     private fun filterItems(query: String) {
