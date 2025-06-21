@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Tema base do app usando Material 3 -->
     <style name="Theme.CardapioDigital" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Cores principais -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorPrimary">@color/fastfood_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/fastfood_orange</item>
+        <item name="colorOnSecondary">@color/white</item>
 
-        <!-- Cor de fundo da janela -->
-        <item name="android:windowBackground">@color/white</item>
+        <!-- Fundo da janela -->
+        <item name="android:windowBackground">@color/background</item>
 
-        <!-- Configurações da ActionBar -->
+        <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
-        <!-- Usa os componentes Material 3 por padrão -->
-
     </style>
 </resources>
