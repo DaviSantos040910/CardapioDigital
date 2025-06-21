@@ -44,8 +44,8 @@ class CategoryFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        //val filteredItems = itemList.filter { it.category == category }
-        val filteredItems = itemList // <-- remove o filtro só pra testar
+        val filteredItems = itemList.filter { it.category == category }
+
 
         adapter = ItemAdapter(filteredItems) { item ->
             val intent = Intent(requireContext(), DetailActivity::class.java)
