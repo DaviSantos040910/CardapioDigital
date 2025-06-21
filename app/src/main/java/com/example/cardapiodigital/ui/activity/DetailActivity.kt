@@ -23,10 +23,10 @@ class DetailActivity : AppCompatActivity() {
         }
 
         // Recebe os dados da Intent
-        val name = intent.getStringExtra("name")
-        val description = intent.getStringExtra("description")
-        val price = intent.getDoubleExtra("price", 0.0)
-        val imageResId = intent.getIntExtra("imageResId", 0)
+        val name = intent.getStringExtra("itemName")
+        val description = intent.getStringExtra("itemDescription")
+        val price = intent.getDoubleExtra("itemPrice", 0.0)
+        val imageResId = intent.getIntExtra("itemImage", 0)
 
         // Referências das Views
         val imageView = findViewById<ImageView>(R.id.itemImage)

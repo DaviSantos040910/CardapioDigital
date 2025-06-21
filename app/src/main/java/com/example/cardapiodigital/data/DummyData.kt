@@ -9,6 +9,7 @@ object DummyData {
             name = "Pizza Margherita",
             description = "Molho de tomate, mussarela, manjericão fresco.",
             price = 35.90,
+            category = "Pratos Principais",
             imageResId = R.drawable.pizza
         ),
         Item(
@@ -16,6 +17,7 @@ object DummyData {
             name = "Hambúrguer Artesanal",
             description = "Pão brioche, carne 180g, cheddar, bacon e cebola caramelizada.",
             price = 29.90,
+            category = "Pratos Principais",
             imageResId = R.drawable.burger
         ),
         Item(
@@ -23,6 +25,7 @@ object DummyData {
             name = "Salada Caesar",
             description = "Alface romana, croutons, parmesão e molho caesar.",
             price = 22.00,
+            category = "Entradas",
             imageResId = R.drawable.salada
         ),
         Item(
@@ -30,6 +33,7 @@ object DummyData {
             name = "Suco Natural",
             description = "Suco de laranja natural, sem adição de açúcar.",
             price = 7.50,
+            category = "Bebidas",
             imageResId = R.drawable.suco
         ),
         Item(
@@ -37,6 +41,7 @@ object DummyData {
             name = "Brownie com Sorvete",
             description = "Brownie de chocolate com uma bola de sorvete de creme.",
             price = 14.50,
+            category = "Sobremesas",
             imageResId = R.drawable.brownie
         )
     )

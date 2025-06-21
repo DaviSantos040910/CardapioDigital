@@ -15,27 +15,30 @@ class ItemAdapter(
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val image: ImageView = view.findViewById(R.id.itemImage)
-        val name: TextView = view.findViewById(R.id.itemName)
-        val price: TextView = view.findViewById(R.id.itemPrice)
+        val itemImage: ImageView = view.findViewById(R.id.item_image)
+        val itemName: TextView = view.findViewById(R.id.item_name)
+        val itemDescription: TextView = view.findViewById(R.id.item_description)
+        val itemPrice: TextView = view.findViewById(R.id.item_price)
+
+        init {
+            view.setOnClickListener {
+                onItemClick(itemList[adapterPosition])
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_cardapio, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cardapio, parent, false)
         return ItemViewHolder(view)
     }
 
-    override fun getItemCount(): Int = itemList.size
+    override fun getItemCount() = itemList.size
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = itemList[position]
-        holder.image.setImageResource(item.imageResId)
-        holder.name.text = item.name
-        holder.price.text = "R$ %.2f".format(item.price)
-
-        holder.itemView.setOnClickListener {
-            onItemClick(item)
-        }
+        holder.itemImage.setImageResource(item.imageResId)
+        holder.itemName.text = item.name
+        holder.itemDescription.text = item.description
+        holder.itemPrice.text = String.format("R$ %.2f", item.price)
     }
 }

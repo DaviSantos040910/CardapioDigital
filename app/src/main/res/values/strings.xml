@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CardapioDigital</string>
+    <string name="item_image_desc">Imagem do item</string>
 </resources>
