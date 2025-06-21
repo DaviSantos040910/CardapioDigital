@@ -16,7 +16,7 @@ class CategoryPagerAdapter(
 
     override fun createFragment(position: Int): Fragment {
         val category = categories[position]
-        val filteredItems = ArrayList(itemList.filter { it.category == category }) // ✅ filtro correto
+        val filteredItems = ArrayList(itemList.filter { it.category == category }) // filtro correto
         return CategoryFragment.newInstance(category, filteredItems)
     }
 
